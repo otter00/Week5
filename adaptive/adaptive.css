@@ -13,21 +13,21 @@
   }
 
   .header {
-    background-color: rgb(160, 151, 255);
+    background-color: lightgray;
     grid-area: header;
     text-align: center;
     padding: 30px;
   }
   
   .sidebar {
-    background-color: rgb(160, 151, 255);
+    background-color: rgb(202, 255, 202);
     grid-area: sidebar;
     text-align: center;
     padding-top: 20px;
   }
   
   .main-content {
-    background-color: rgb(160, 151, 255);
+    background-color: rgb(255, 246, 195);
     grid-area: main-content;
     text-align: center;
   }
@@ -73,24 +73,24 @@
 
  .elem-1 {
     grid-area: elem-1;
-    background-color: rgb(97, 82, 255);
+    background-color: rgb(250, 219, 109);
     padding: 20px;
  }
 
  .elem-2 {
     grid-area: elem-2;
-    background-color: rgb(97, 82, 255);
+    background-color: rgb(250, 219, 109);
     padding: 20px;
  }
 
  .elem-3 {
     grid-area: elem-3;
-    background-color: rgb(97, 82, 255);
+    background-color: rgb(250, 219, 109);
     padding: 20px;
  }
 
   .footer {
-    background-color: rgb(160, 151, 255);
+    background-color: lightgray;
     grid-area: footer;
   }
 
@@ -104,28 +104,28 @@
   }
 
   .foot-1 {
-    background-color: rgb(97, 82, 255);
+    background-color:  white;
     grid-area: foot-1;
     text-align: center;
     padding: 10px;
   }
 
   .foot-2 {
-    background-color: rgb(97, 82, 255);
+    background-color:  white;
     grid-area: foot-2;
     text-align: center;
     padding: 10px;
   }
 
   .foot-3 {
-    background-color: rgb(97, 82, 255);
+    background-color:  white;
     grid-area: foot-3;
     text-align: center;
     padding: 10px;
   }
 
   .foot-4 {
-    background-color: rgb(97, 82, 255);
+    background-color:  white;
     grid-area: foot-4;
     text-align: center;
     padding: 10px;
