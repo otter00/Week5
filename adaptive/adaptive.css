@@ -12,6 +12,20 @@
     margin: auto;
   }
 
+@media screen and (max-width: 767px) {
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 25%;
+  grid-template-rows: 15% 1fr 1fr 15%;
+  gap: 1rem;
+  grid-template-areas: "header header"
+  "main-content sidebar"
+  "main-content sidebar"
+   "footer footer";
+}
+  }
+
   .header {
     background-color: lightgray;
     grid-area: header;
@@ -32,18 +46,27 @@
     text-align: center;
   }
 
-  .main-grid {
-    display: grid;
-    /* background-color: bisque; */
-    margin: 20px 5px 10px 5px;
-    height: 310px;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "section-1"
-                        "section-2"
-                        "section-2";
-  }
+    .main-grid {
+      display: grid;
+      /* background-color: bisque; */
+      margin: 20px 5px 10px 5px;
+      height: 310px;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "section-1"
+                          "section-2"
+                          "section-2";
+    }
+
+
+    @media screen and (max-width: 767px) {
+      .main-grid {
+        grid-template-areas: "section-1"
+                            "section-2"
+                            "section-2";
+      }
+    }    
 
  .main-grid-section-1 {
     margin: 20px 20px 0 20px;
@@ -59,7 +82,7 @@
     grid-area: section-2;
  }
 
- .section-2-grid {
+  .section-2-grid {
     display: grid;
     gap: 1rem;
     margin-top: 20px;
@@ -70,6 +93,17 @@
     grid-template-areas: "elem-1 elem-2"
                         "elem-3 elem-3";
  }
+
+ @media screen and (max-width: 767px) {
+  .section-2-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "elem-1"
+                        "elem-2"
+                        "elem-3";
+  }
+ }
+
 
  .elem-1 {
     grid-area: elem-1;
@@ -89,10 +123,31 @@
     padding: 20px;
  }
 
+ @media screen and (max-width: 400px) {
+  .elem-1 {
+    grid-area: elem-1;
+    background-color: rgb(250, 219, 109);
+    padding: 2px;
+ }
+
+ .elem-2 {
+    grid-area: elem-2;
+    background-color: rgb(250, 219, 109);
+    padding: 2px;
+ }
+
+ .elem-3 {
+    grid-area: elem-3;
+    background-color: rgb(250, 219, 109);
+    padding: 2px;
+ }
+ }
+
   .footer {
     background-color: lightgray;
     grid-area: footer;
   }
+
 
   .footer-grid {
     display: grid;
@@ -101,6 +156,17 @@
     height: 40px;
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-areas: "foot-1 foot-2 foot-3 foot-4";
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) ;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "foot-1 foot-2"
+                            "foot-3 foot-4";
+    }
+  
   }
 
   .foot-1 {
@@ -129,4 +195,42 @@
     grid-area: foot-4;
     text-align: center;
     padding: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .foot-1 {
+      font-size: 0.6em;
+      height: 100%;
+      background-color:  white;
+      grid-area: foot-1;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .foot-2 {
+      font-size: 0.6em;
+      height: 100%;
+      background-color:  white;
+      grid-area: foot-2;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .foot-3 {
+      font-size: 0.6em;
+      height: 100%;
+      background-color:  white;
+      grid-area: foot-3;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .foot-4 {
+      font-size: 0.6em;
+      height: 100%;
+      background-color:  white;
+      grid-area: foot-4;
+      text-align: center;
+      padding: 2px;
+    }
   }
