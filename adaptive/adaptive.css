@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    width: 80%;
+    max-width: 80%;
     height: 500px;
     grid-template-areas: "header header header header"
                          "main-content main-content main-content sidebar"
@@ -16,12 +16,13 @@
 .container {
   display: grid;
   width: 100%;
+  max-width: 100%;
   grid-template-columns: 50% 25%;
   grid-template-rows: 15% 1fr 1fr 15%;
   gap: 1rem;
   grid-template-areas: "header header"
-  "main-content sidebar"
-  "main-content sidebar"
+  "main-content main-content"
+  "sidebar sidebar"
    "footer footer";
 }
   }
@@ -39,6 +40,15 @@
     text-align: center;
     padding-top: 20px;
   }
+
+  @media screen and (max-width: 767px) {
+    .sidebar {
+      background-color: rgb(202, 255, 202);
+      grid-area: sidebar;
+      text-align: center;
+      padding: 15px;
+    }
+  }
   
   .main-content {
     background-color: rgb(255, 246, 195);
@@ -50,7 +60,7 @@
       display: grid;
       /* background-color: bisque; */
       margin: 20px 5px 10px 5px;
-      height: 310px;
+      min-height: 310px;
       gap: 1rem;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
@@ -86,7 +96,7 @@
     display: grid;
     gap: 1rem;
     margin-top: 20px;
-    height: 80%;
+    min-height: 80%;
     text-align: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -103,7 +113,6 @@
                         "elem-3";
   }
  }
-
 
  .elem-1 {
     grid-area: elem-1;
@@ -195,12 +204,12 @@
     grid-area: foot-4;
     text-align: center;
     padding: 10px;
-  }
+    }
 
   @media screen and (max-width: 767px) {
     .foot-1 {
-      font-size: 0.6em;
-      height: 100%;
+      font-size: 2vw;
+      min-height: 100%;
       background-color:  white;
       grid-area: foot-1;
       text-align: center;
@@ -208,8 +217,8 @@
     }
   
     .foot-2 {
-      font-size: 0.6em;
-      height: 100%;
+      font-size: 2vw;
+      min-height: 100%;
       background-color:  white;
       grid-area: foot-2;
       text-align: center;
@@ -217,8 +226,8 @@
     }
   
     .foot-3 {
-      font-size: 0.6em;
-      height: 100%;
+      font-size: 2vw;
+      min-height: 100%;
       background-color:  white;
       grid-area: foot-3;
       text-align: center;
@@ -226,8 +235,8 @@
     }
   
     .foot-4 {
-      font-size: 0.6em;
-      height: 100%;
+      font-size: 2vw;
+      min-height: 100%;
       background-color:  white;
       grid-area: foot-4;
       text-align: center;
